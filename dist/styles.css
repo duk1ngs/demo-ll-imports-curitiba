@@ -21,3 +21,65 @@
 
 /* R2: fallback is an actual export from the GLB studio, never a primitive illustration. */
 .static-phone{inset:0;left:0;top:0;width:100%;height:100%;object-fit:contain;transform:none;filter:none;pointer-events:none}
+
+/* Native, brand-specific adaptations of Magic UI Line Shadow Text,
+   Interactive Grid Pattern, Light Rays and Warp Background. MIT notice below.
+   Layout, timing and art direction are original; no React/Motion dependency. */
+.brand-background{position:absolute;inset:0;overflow:hidden;z-index:-3;pointer-events:none;contain:paint;--light-x:50%;--light-y:35%}
+.brand-background span,.brand-background svg{pointer-events:none;position:absolute}
+.premium-hero .hero-orbit{display:none}.premium-hero .brand-parallax{z-index:-1;opacity:1;top:145px;transform:translateY(var(--parallax-y,0));color:color-mix(in srgb,var(--ink) 13%,transparent)}
+.brand-background .bg-grain{inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.8' d='M0 0h180v180H0z'/%3E%3C/svg%3E");background-size:180px}
+.brand-background .ambient{inset:0;background:radial-gradient(ellipse at var(--light-x) var(--light-y),rgba(var(--finish-rgb),.11),transparent 58%);transition:background-color .6s}
+.pia .brand-background{background:radial-gradient(ellipse at 50% 22%,#24475b 0,#102f43 30%,#092437 70%)}
+.pia .bg-aperture{width:740px;height:740px;top:-230px;left:50%;transform:translateX(-50%) rotate(-22deg);border:1px solid #d6c6a42a;border-radius:50%;box-shadow:0 0 0 70px #d6c6a406,0 0 0 140px #d6c6a404;background:conic-gradient(from 30deg,transparent,#e0cba714,transparent 18%,transparent 70%,#e0cba70a,transparent)}
+.pia .bg-cutlight{left:14%;top:-260px;width:24%;height:790px;transform:rotate(29deg);background:linear-gradient(90deg,transparent,#f5d99d0a,transparent);animation:pia-light 15s ease-in-out infinite alternate;animation-play-state:paused}
+.pia .brand-parallax{font-size:clamp(200px,25vw,370px);letter-spacing:-.07em;color:#e8d5af1c;text-shadow:0 1px #dfc8a910;top:90px}
+.pia .brand-parallax:after{content:attr(data-word);position:absolute;inset:6px 0 0;color:transparent;-webkit-text-stroke:1px #dfc8a91c;z-index:-1}
+.ls .brand-background{background:linear-gradient(125deg,#17130f,#0c0c0c 42%,#21150f 100%)}
+.ls .bg-warp{left:50%;top:55px;width:1100px;height:570px;transform:translateX(-50%) perspective(650px) rotateX(64deg) rotateZ(-16deg);background-image:linear-gradient(#ff6a241c 1px,transparent 1px),linear-gradient(90deg,#ff6a2419 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse,#000,transparent 67%);opacity:.5}
+.ls .bg-track{left:-20%;top:60px;width:140%;height:1px;background:linear-gradient(90deg,transparent,#ff7b3866,transparent);transform:rotate(-17deg);box-shadow:0 100px #ff6a2414,0 200px #ff6a2409}
+.ls .brand-parallax{font-size:clamp(100px,14vw,215px);letter-spacing:-.075em;font-weight:800;top:172px;color:#f4e4d210}
+.ls .brand-parallax:after{content:attr(data-word);position:absolute;inset:.045em 0 0 .045em;z-index:-1;background:linear-gradient(45deg,transparent 45%,#ff6a2444 45%,#ff6a2444 55%,transparent 0);background-size:.06em .06em;background-clip:text;-webkit-background-clip:text;color:transparent;animation:brand-line-shadow 18s linear infinite;animation-play-state:paused}
+.ll .brand-background{background:radial-gradient(ellipse at 50% 25%,#e0eae0 0,#f4f5f1 57%)}
+.ll .bg-grid{inset:0;width:100%;height:100%;opacity:.42;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 74%)}
+.ll .bg-grid path{stroke:#315c3c28;stroke-width:1}.ll .bg-grid rect[data-grid-focus]{fill:#5583621a;transition:x .18s,y .18s,opacity .6s}
+.ll .bg-index{font-size:9px;letter-spacing:.18em;color:#315c3c88;top:70px;left:4%;writing-mode:vertical-rl}
+.ll .brand-parallax{color:transparent;-webkit-text-stroke:1px #305b3c38;letter-spacing:-.065em;font-size:clamp(100px,16vw,240px);top:165px}
+.londrina .brand-background{background:radial-gradient(ellipse at 50% 23%,#e8d6a6 0,#efe9d7 37%,#ede9dc 70%)}
+.londrina .bg-sun{width:390px;height:390px;left:50%;top:30px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 30% 25%,#f7e9b9,#d2b77c 70%,#b89a6320);box-shadow:0 0 120px #ebca8c33;opacity:.7}
+.londrina .bg-orbit{left:50%;top:-70px;width:780px;height:530px;border:1px solid #80754b30;border-radius:50%;transform:translateX(-50%) rotate(-24deg);box-shadow:0 0 0 42px #b39b6520,0 0 0 43px #80754b17;animation:solar-orbit 24s ease-in-out infinite alternate;animation-play-state:paused}
+.londrina .brand-parallax{color:#4d60452b;font-size:clamp(100px,16vw,245px);letter-spacing:-.06em;top:166px;mix-blend-mode:multiply}
+.fg .brand-background{background:radial-gradient(ellipse at 60% 18%,#214b63,#0b2438 60%)}
+.fg .bg-ray{top:-70px;left:var(--ray-left);width:150px;height:640px;transform:rotate(var(--ray-angle));transform-origin:top;background:linear-gradient(180deg,#b7e3f01c,transparent 80%);filter:blur(14px);opacity:.65;animation:horizon-ray var(--ray-time) ease-in-out infinite alternate;animation-play-state:paused}
+.fg .bg-horizon{top:460px;left:-15%;width:130%;height:260px;border-top:1px solid #b4dae72e;border-radius:50%;background:radial-gradient(ellipse at 50% 0,#aac8da12,transparent 66%);box-shadow:0 -14px 70px #b4dae70a}
+.fg .brand-parallax{color:#c5e9f01c;font-size:clamp(120px,19vw,280px);letter-spacing:-.06em;top:167px}
+.background-live .bg-cutlight,.background-live .bg-orbit,.background-live .bg-ray,.background-live .brand-parallax:after{animation-play-state:running}
+@keyframes pia-light{to{transform:translateX(80px) rotate(23deg);opacity:.55}}@keyframes brand-line-shadow{to{background-position:100% -100%}}@keyframes solar-orbit{to{transform:translateX(-50%) rotate(-17deg) scale(1.04)}}@keyframes horizon-ray{to{transform:rotate(calc(var(--ray-angle) + 4deg));opacity:.3}}
+@media(max-width:760px){.premium-hero .brand-parallax{white-space:nowrap;left:0;width:100%;top:175px!important}.pia .premium-hero .brand-parallax{top:130px!important;font-size:68vw}.ls .premium-hero .brand-parallax{font-size:15.5vw;letter-spacing:-.065em!important;transform:translateY(var(--parallax-y,0)) scaleY(1.6);top:190px!important}.ll .premium-hero .brand-parallax{font-size:18vw;top:205px!important}.londrina .premium-hero .brand-parallax{font-size:18.4vw;top:215px!important}.fg .premium-hero .brand-parallax{font-size:22.5vw;top:210px!important}.pia .bg-aperture{width:430px;height:600px;top:-230px}.pia .bg-cutlight{width:50%;left:-5%;height:650px}.ls .bg-warp{width:700px;height:500px;top:65px}.ll .bg-index{left:14px;top:68px;font-size:7px}.londrina .bg-sun{width:270px;height:330px;top:55px}.londrina .bg-orbit{width:510px;height:370px;top:25px}.fg .bg-ray{width:85px;height:500px;filter:none}.fg .bg-horizon{top:355px}.brand-background .ambient{background:radial-gradient(ellipse at 50% 30%,rgba(var(--finish-rgb),.09),transparent 65%)}}
+@media(prefers-reduced-motion:reduce){.brand-background *,.brand-parallax:after{animation:none!important}.brand-background .ambient{transition:none}.ls .premium-hero .brand-parallax{transform:none!important}}
+
+/* Photographic presentation: exported views, bounded perspective, no public mesh. */
+.photo-presentation{position:absolute;inset:0;transform:perspective(1000px) rotateX(var(--photo-x,0deg)) rotateY(var(--photo-y,0deg));transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.7,.2,1);pointer-events:none;will-change:transform}.photo-view{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .42s ease;transform:translateZ(12px);pointer-events:none}.photo-view.is-active{opacity:1}[data-renderer=photo-depth] .static-phone{display:none}.asset-credit{font-size:9px!important;margin-top:12px!important;line-height:1.6}.product-stage{cursor:ew-resize}@media(prefers-reduced-motion:reduce){.photo-presentation{transform:none!important;will-change:auto;transition:none}.photo-view{transition:none}}
+
+/* MIT License
+
+Copyright (c) Magic UI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
